@@ -47,6 +47,21 @@
   .feature-card h3 { font-size: 1.15rem; margin-bottom: .5rem; }
   .feature-card p { color: var(--muted); font-size: .95rem; line-height: 1.6; }
 
+  /* STATS */
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 900px; margin: 0 auto 3rem; }
+  .stat-card { background: var(--card); border: 1px solid #21262d; border-radius: 16px; padding: 2rem; text-align: center; transition: border-color .3s, transform .3s; }
+  .stat-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+  .stat-card .number { font-size: 2.5rem; font-weight: 900; color: var(--accent); line-height: 1.2; }
+  .stat-card .label { color: var(--muted); font-size: .9rem; margin-top: .5rem; line-height: 1.4; }
+  .cost-table { max-width: 700px; margin: 0 auto; background: var(--card); border: 1px solid #21262d; border-radius: 16px; overflow: hidden; }
+  .cost-table table { width: 100%; border-collapse: collapse; }
+  .cost-table th, .cost-table td { padding: 1rem 1.5rem; text-align: left; border-bottom: 1px solid #21262d; }
+  .cost-table th { color: var(--accent); font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; }
+  .cost-table td { font-size: .95rem; }
+  .cost-table tr:last-child td { border-bottom: none; font-weight: 700; color: var(--accent); }
+  .cost-table .price { text-align: right; }
+  .subsection-title { text-align: center; font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text); }
+
   /* TEAM */
   .team-grid { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; max-width: 800px; margin: 0 auto; }
   .team-card { background: var(--card); border: 1px solid #21262d; border-radius: 16px; padding: 2rem 2.5rem; text-align: center; min-width: 200px; }
@@ -69,6 +84,7 @@
   <div class="logo">🚲 <span>Cycle</span>Guard</div>
   <ul>
     <li><a href="#features">Features</a></li>
+    <li><a href="#business">Business Case</a></li>
     <li><a href="#team">Team</a></li>
   </ul>
 </nav>
@@ -115,6 +131,44 @@
       <p>IP65 rated — handles rain, dust, and everything Singapore throws at you.</p>
     </div>
   </div>
+</section>
+
+<section id="business">
+  <h2 class="section-title">The Problem Is Real</h2>
+  <p class="section-sub">Cycling accidents in Singapore are rising — and existing solutions aren't cutting it.</p>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="number">~40</div>
+      <div class="label">Cyclist fatalities per year in Singapore</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">1,000+</div>
+      <div class="label">Cycling-related injuries reported annually</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">6&ndash;8%</div>
+      <div class="label">Of all road fatalities are cyclists (&lt;2% of commuters)</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">730km</div>
+      <div class="label">Of cycling paths &mdash; growing fast, safety isn't keeping up</div>
+    </div>
+  </div>
+
+  <h3 class="subsection-title">💰 What CycleGuard Costs</h3>
+  <div class="cost-table">
+    <table>
+      <tr><th>Component</th><th class="price">Est. Cost</th></tr>
+      <tr><td>Proximity &amp; motion sensors</td><td class="price">$8 &ndash; $12</td></tr>
+      <tr><td>LED indicator module</td><td class="price">$5 &ndash; $8</td></tr>
+      <tr><td>Bluetooth MCU (ESP32)</td><td class="price">$4 &ndash; $6</td></tr>
+      <tr><td>Rechargeable battery + USB-C</td><td class="price">$6 &ndash; $10</td></tr>
+      <tr><td>Weatherproof casing (IP65)</td><td class="price">$3 &ndash; $5</td></tr>
+      <tr><td>Companion app (development)</td><td class="price">$0 (in-house)</td></tr>
+      <tr><td><strong>Total per unit</strong></td><td class="price"><strong>~$26 &ndash; $41</strong></td></tr>
+    </table>
+  </div>
+  <p style="text-align:center; color:var(--muted); margin-top:1.5rem; font-size:.95rem;">Retail bike safety systems cost $80&ndash;$200+. CycleGuard delivers <strong style="color:var(--accent)">3&ndash;5x more value</strong> at a fraction of the price.</p>
 </section>
 
 <section id="team" style="padding-bottom: 4rem;">
